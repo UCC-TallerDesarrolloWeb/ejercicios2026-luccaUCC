@@ -102,3 +102,25 @@ mostrarocultar = (valor) => {
  //       document.getElementById("unDiv").style.display = 'none';
  //   }
 }
+
+/**
+ * calcular la suma de los numeros
+ * @method calcularsuma
+ */
+calcularsuma = () =>{
+    let sum1, sum2;
+    sum1= Number(document.getElementById("nums1").value);
+    sum2= Number(document.getElementById("nums2").value);
+    document.getElementById("totalS").value = sum1 + sum2;
+}
+
+/**
+ * calcular la resta de los numeros
+ * @method calcularresta
+ */
+calcularresta = () =>{
+    let res1, res2;
+    res1= Number(document.getElementById("numr1").value);
+    res2= Number(document.getElementById("numr2").value);
+    document.getElementById("totalR").value = res1 - res2;
+}
