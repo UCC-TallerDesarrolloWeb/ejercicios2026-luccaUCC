@@ -52,3 +52,23 @@ function convertirUnidades(id, valor){
     }
 
 }
+
+/**
+ * Convertor grados a radianes
+ * @method convertirGR
+ * @param {string} id - id del elemento input en el html
+ */
+
+function convertirGR(id){
+    let grad, rad;
+
+    if(id==="grados"){
+        grad= document.getElementById("grados").value;
+        rad= grad*Math.PI/180;
+    }else{
+        rad= document.getElementById("radianes").value;
+        grad= rad*180/Math.PI;
+    }
+    document.getElementById("grados").value = grad;
+    document.getElementById("radianes").value = rad;
+}
