@@ -65,8 +65,11 @@ const productos = [
 /**
  * mostrar un modal con el datalle del producto
  * @method mostrarmodal
+ * @param {number} num - id del elemnto que se desea visualizar el modal
  */
-mostrarmodal = () => {
+mostrarmodal = (num) => {
+  document.getElementById("nombreproducto").innerText = productos[num].nombre;
+  document.getElementById("descripcionproducto").innerText = productos[num].description;
   document.getElementById("modal").style.display = 'block';
 }
 
@@ -85,12 +88,12 @@ cerrarmodal = () => {
 mostrarcatalogo = () =>{
   let contenido = "";
 
-  productos.forEach((producto) => {
+  productos.forEach((producto, id) => {
     contenido += `<div>
                     <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/${producto.imagen}" alt="producto.nombre">
                     <h3>${producto.nombre}</h3>
-                    <button type="button" onclick="mostrarmodal()">ver detalle de producto</button>
-                </div>`
+                    <button type="button" onclick="mostrarmodal(${id})">ver detalle de producto</button>
+                </div>`;
   });
   document.getElementById("catalogo").innerHTML = contenido;
 }
