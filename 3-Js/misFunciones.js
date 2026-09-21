@@ -5,51 +5,65 @@
  * @param {number} valor- valor ingresado por el usuario
  */
 
-function convertirUnidades(id, valor){
+convertirUnidades = (id, valor) => {
+    let metro, pulgada, pie, yarda;
 
     if(isNaN(valor)){
         alert("se ingreso un valor incorrecto donde deberia haber "+id); 
 
-        document.getElementById("metro").value = "" ; 
+        metro="";
 
-        document.getElementById("pulgada").value = "" ; 
+        pulgada="";
 
-        document.getElementById("pie").value = "" ; 
+        pie="";
 
-        document.getElementById("yarda").value = "";
+        yarda="";
 
     } else if(id === "metro"){
-        document.getElementById("pulgada").value = valor * 39.3701; 
+        metro = valor;
 
-        document.getElementById("pie").value = valor * 3.28084 ; 
+        pulgada = valor * 39.3701; 
 
-        document.getElementById("yarda").value = valor * 1.09361; 
+        pie = valor * 3.28084 ; 
+
+        yarda = valor * 1.09361; 
 
     } else if(id === "pulgada"){
 
-        document.getElementById("metro").value = valor * 0.0254
+        pulgada=valor;
 
-        document.getElementById("pie").value = valor * 0.08333333
+        metro = valor * 0.0254;
 
-        document.getElementById("yarda").value = valor * 0.02777778
+        pie = valor * 0.08333333;
+
+        yarda = valor * 0.02777778;
 
     } else if(id === "pie"){
 
-        document.getElementById("metro").value = valor * 0.3048
+        pie=valor;
 
-        document.getElementById("yarda").value = valor * 0.3333333
+        metro = valor * 0.3048;
 
-        document.getElementById("pulgada").value = valor * 12; 
+        yarda = valor * 0.3333333;
+
+        pulgada = valor * 12; 
         
     } else if(id === "yarda"){
 
-        document.getElementById("metro").value = valor * 0.9144
+        yarda=valor;
 
-        document.getElementById("pulgada").value = valor * 36; 
+        metro = valor * 0.9144
 
-        document.getElementById("pie").value = valor * 3; 
+        pulgada = valor * 36; 
+
+        pie = valor * 3; 
         
     }
+
+    document.getElementById("metro").value = metro;
+    document.getElementById("pulgada").value = pulgada;
+    document.getElementById("pie").value = pie;
+    document.getElementById("yarda").value = yarda;
 
 }
 
