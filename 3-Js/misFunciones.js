@@ -126,3 +126,31 @@ calcularresta = () =>{
     res2= Number(document.getElementById("numr2").value);
     document.getElementById("totalR").value = res1 - res2;
 }
+
+/**
+ * calcular la multiplicacion de los numeros
+ * @method calcularmultiplicacion
+ */
+calcularmultiplicacion = () =>{
+    let mul1, mul2;
+    mul1= Number(document.getElementById("numm1").value);
+    mul2= Number(document.getElementById("numm2").value);
+    document.getElementById("totalM").value = mul1 * mul2;
+}
+
+/**
+ * calcular la division de los numeros
+ * @method calculardivision
+ */
+calculardivision = () =>{
+    let div1, div2;
+    div1= Number(document.getElementById("numd1").value);
+    div2= Number(document.getElementById("numd2").value);
+
+    if(div2 === 0){
+        alert("no se puede dividir por cero");
+        document.getElementById("totalD").value = "";
+    }else{
+        document.getElementById("totalD").value = div1 / div2;
+    }
+}

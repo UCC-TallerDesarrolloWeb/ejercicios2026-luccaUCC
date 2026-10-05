@@ -5,13 +5,13 @@
     <link href="catalogo.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="tienda.js"></script>
 </head>
-<body class="grid-container" onload="mostrarcatalogo()">
+<body class="grid-container" onload="mostrarcarrito()">
     <header class="item1">
         carrito
     </header>
     <nav class="item2">
         <a href="productos.html">Catálogo de Productos</a>
-        <a href="carrito.html"></a>
+        <a href="carrito.html">Carrito de Compras (<span id="contador">0</span>)</a>
     </nav>
     
     <main class="item4" id="carrito">
@@ -19,6 +19,8 @@
     </main>
     <footer class="item5">
         contacto
+        <p>Total: <span id="total"></span></p>
+        <button type="button" onclick="vaciarcarrito()">Vaciar carrito</button>
     </footer>
 </body>
 </html>
